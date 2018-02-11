@@ -1,0 +1,14 @@
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\bin\Debug\EurOption.exe
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\bin\Debug\EurOption.pdb
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.csprojResolveAssemblyReference.cache
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\MainWindow.g.cs
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\App.g.cs
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption_MarkupCompile.cache
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption_MarkupCompile.lref
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\MainWindow.baml
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.g.resources
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.Properties.Resources.resources
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.csproj.GenerateResource.Cache
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.csproj.CoreCompileInputs.cache
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.exe
+C:\Users\Tianzi Guo\source\repos\EurOption\EurOption\obj\Debug\EurOption.pdb
