@@ -54,25 +54,25 @@ namespace EurOption
                 double[] _Greeks = new double[10];
                 double df = 0.001;
                 Option option = new Option();
-                _Greeks[0] = (option.GetSimulations(SO + SO*df, K, T, r, sigma, StepNum, TrailNum,Randoms)[0] - option.GetSimulations(SO - SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[0]) / (2 * SO * df);
+                _Greeks[0] = (option.GetSimulations(SO + SO*df, K,   sigma, r, T, StepNum, TrailNum,Randoms)[0] - option.GetSimulations(SO - SO * df, K, sigma, r, T, StepNum, TrailNum, Randoms)[0]) / (2 * SO * df);
                 // the delta greek of European Call Option
-                _Greeks[1] = (option.GetSimulations(SO + SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO - SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[1]) / (2 * SO * df);
+                _Greeks[1] = (option.GetSimulations(SO + SO * df, K, sigma, r, T, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO - SO * df, K, sigma, r, T, StepNum, TrailNum, Randoms)[1]) / (2 * SO * df);
                 //the delta greek of European Put Option.
-                _Greeks[2] = (option.GetSimulations(SO+ SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[0] - 2 * option.GetSimulations(SO, K, T, r, sigma, StepNum, TrailNum, Randoms)[0] + option.GetSimulations(SO - SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[0]) / (SO * df* SO * df);
+                _Greeks[2] = (option.GetSimulations(SO+ SO * df, K,  sigma, r, T, StepNum, TrailNum, Randoms)[0] - 2 * option.GetSimulations(SO, K, sigma, r, T, StepNum, TrailNum, Randoms)[0] + option.GetSimulations(SO - SO * df, K, sigma, r, T, StepNum, TrailNum, Randoms)[0]) / (SO * df* SO * df);
                 //the gamma greek of European Call Option.
-                _Greeks[3] = (option.GetSimulations(SO+SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[1] - 2 * option.GetSimulations(SO, K, T, r, sigma, StepNum, TrailNum, Randoms)[1] + option.GetSimulations(SO - SO * df, K, T, r, sigma, StepNum, TrailNum, Randoms)[1]) / (SO * df* SO * df);
+                _Greeks[3] = (option.GetSimulations(SO+SO * df, K, sigma, r, T, StepNum, TrailNum, Randoms)[1] - 2 * option.GetSimulations(SO, K, sigma, r, T, StepNum, TrailNum, Randoms)[1] + option.GetSimulations(SO - SO * df, K, sigma, r, T, StepNum, TrailNum, Randoms)[1]) / (SO * df* SO * df);
                 //the gamma greek of European Put Option.
-                _Greeks[4] = (option.GetSimulations(SO, K, T, r, sigma + sigma*df, StepNum, TrailNum, Randoms)[0] - option.GetSimulations(SO, K, T, r, sigma - sigma * df, StepNum, TrailNum, Randoms)[0]) / (2 * sigma * df);
+                _Greeks[4] = (option.GetSimulations(SO, K, sigma + sigma*df, r, T, StepNum, TrailNum, Randoms)[0] - option.GetSimulations(SO, K,sigma - sigma * df, r, T, StepNum, TrailNum, Randoms)[0]) / (2 * sigma * df);
                 //the vega greek of European Call Option
-                _Greeks[5] = (option.GetSimulations(SO, K, T, r, sigma + sigma * df, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO, K, T, r, sigma - sigma * df, StepNum, TrailNum, Randoms)[1]) / (2 * sigma * df);
+                _Greeks[5] = (option.GetSimulations(SO, K, sigma + sigma * df, r, T, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO, K, sigma - sigma * df, r, T, StepNum, TrailNum, Randoms)[1]) / (2 * sigma * df);
                 //the vega greek of European Put Option.
-                _Greeks[6] = (option.GetSimulations(SO, K, T - T * df, r, sigma, StepNum, TrailNum, Randoms)[0] - option.GetSimulations(SO, K, T, r, sigma, StepNum, TrailNum, Randoms)[0]) / (df*T);
+                _Greeks[6] = (option.GetSimulations(SO, K, sigma, r, T - T * df, StepNum, TrailNum, Randoms)[0] - option.GetSimulations(SO, K, sigma, r,T, StepNum, TrailNum, Randoms)[0]) / (T*df);
                 //the theta greek of European Call Option
-                _Greeks[7] = (option.GetSimulations(SO, K, T + df*T, r, sigma, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO, K, T, r, sigma, StepNum, TrailNum, Randoms)[1]) / (df*T);
+                _Greeks[7] = (option.GetSimulations(SO, K,  sigma, r, T - T * df, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO, K, sigma, r,T, StepNum, TrailNum, Randoms)[1]) / (T*df);
                 //the theta greek of European Put Option.
-                _Greeks[8] = (option.GetSimulations(SO, K, T, r + r*df, sigma, StepNum, TrailNum, Randoms)[0] - option.GetSimulations(SO, K, T, r - r*df, sigma, StepNum, TrailNum, Randoms)[0]) / (2 *r* df);
+                _Greeks[8] = (option.GetSimulations(SO, K, sigma, r + r * df, T,StepNum, TrailNum, Randoms)[0] - option.GetSimulations(SO, K, sigma, r - r * df,T, StepNum, TrailNum, Randoms)[0]) / (2 *r* df);
                 //the rho greek of European Call Option
-                _Greeks[9] = (option.GetSimulations(SO, K, T, r + r*df, sigma, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO, K, T, r - r*df, sigma, StepNum, TrailNum, Randoms)[1]) / (2 * r*df);
+                _Greeks[9] = (option.GetSimulations(SO, K, sigma, r + r * df,T, StepNum, TrailNum, Randoms)[1] - option.GetSimulations(SO, K, sigma, r - r * df,T, StepNum, TrailNum, Randoms)[1]) / (2 * r*df);
                 //the rho greek of European Put Option.
                 return _Greeks;
             }
@@ -113,10 +113,10 @@ namespace EurOption
                 for (int q = 0; q < TrailNum; q++)
                 {
                     StdCallSum = StdCallSum + Math.Pow((Math.Max(sims[q, StepNum - 1] - K, 0) - x), 2);
-                    StdPutSum = StdPutSum + Math.Pow((K - Math.Max(sims[q, StepNum - 1], 0) - y), 2);
+                    StdPutSum = StdPutSum + Math.Pow((Math.Max(K-sims[q, StepNum - 1], 0) - y), 2);
                 }
-                StdCallEr = Math.Sqrt((1.0 / (TrailNum - 1)) * StdCallSum) * Math.Sqrt(1.0 / TrailNum);
-                StdPutEr = Math.Sqrt((1.0 / (TrailNum - 1)) * StdPutSum) * Math.Sqrt(1.0 / TrailNum);
+                StdCallEr = Math.Sqrt((1.0 / (TrailNum - 1)) * StdCallSum) / Math.Sqrt(TrailNum);
+                StdPutEr = Math.Sqrt((1.0 / (TrailNum - 1)) * StdPutSum) /Math.Sqrt(TrailNum);
                 double[] Result =new double[4];
                 Result[0] = x;
                 Result[1] = y;
@@ -191,16 +191,22 @@ namespace EurOption
             Console.Write("{0}\t", EurpCall[1].ToString());
             Console.Write("{0}\t", EurpCall[2].ToString());
             Console.Write("{0}\t", EurpCall[3].ToString());
+            Console.WriteLine("\n");
             Console.Write("{0}\t", GreekValue[0].ToString());
             Console.Write("{0}\t", GreekValue[1].ToString());
+            Console.WriteLine("\n");
             Console.Write("{0}\t", GreekValue[2].ToString());
             Console.Write("{0}\t", GreekValue[3].ToString());
+            Console.WriteLine("\n");
             Console.Write("{0}\t", GreekValue[4].ToString());
             Console.Write("{0}\t", GreekValue[5].ToString());
+            Console.WriteLine("\n");
             Console.Write("{0}\t", GreekValue[6].ToString());
             Console.Write("{0}\t", GreekValue[7].ToString());
+            Console.WriteLine("\n");
             Console.Write("{0}\t", GreekValue[8].ToString());
             Console.Write("{0}\t", GreekValue[9].ToString());
+            Console.WriteLine("\n");
 
         }
 
