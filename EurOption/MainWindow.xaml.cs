@@ -91,7 +91,7 @@ namespace EurOption
                 {
                     for (int j = 1; j < StepNum; j++)
                     {
-                        sims[i,j] = sims[i, j - 1] * Math.Exp((r -0.5*Math.Pow(sigma,2) ) * (1.0 / StepNum) + sigma * Math.Pow((1.0 /StepNum),0.5) * Randoms[i, j]);
+                        sims[i,j] = sims[i, j - 1] * Math.Exp((r -0.5*Math.Pow(sigma,2) ) * (t / StepNum) + sigma * Math.Pow((t /StepNum),0.5) * Randoms[i, j]);
                         
                     }
                 }
@@ -183,69 +183,68 @@ namespace EurOption
        
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            double[,] Randoms = RandomNum.RandomSet(TrailNum, StepNum);
-            double[] EurpCall = EuropOption.PriceEurp( SO, K,sigma, r, T, StepNum, TrailNum,Randoms);
-            double[] GreekValue = Greek.Greeks(SO, K, sigma, r, T,  StepNum, TrailNum,Randoms);
-           
-            Console.Write("{0}\t", EurpCall[0].ToString());
-            Console.Write("{0}\t", EurpCall[1].ToString());
-            Console.Write("{0}\t", EurpCall[2].ToString());
-            Console.Write("{0}\t", EurpCall[3].ToString());
-            Console.WriteLine("\n");
-            Console.Write("{0}\t", GreekValue[0].ToString());
-            Console.Write("{0}\t", GreekValue[1].ToString());
-            Console.WriteLine("\n");
-            Console.Write("{0}\t", GreekValue[2].ToString());
-            Console.Write("{0}\t", GreekValue[3].ToString());
-            Console.WriteLine("\n");
-            Console.Write("{0}\t", GreekValue[4].ToString());
-            Console.Write("{0}\t", GreekValue[5].ToString());
-            Console.WriteLine("\n");
-            Console.Write("{0}\t", GreekValue[6].ToString());
-            Console.Write("{0}\t", GreekValue[7].ToString());
-            Console.WriteLine("\n");
-            Console.Write("{0}\t", GreekValue[8].ToString());
-            Console.Write("{0}\t", GreekValue[9].ToString());
-            Console.WriteLine("\n");
+            try
+            {
 
+
+
+                SO = Convert.ToDouble(this.So.Text);
+
+
+                K = Convert.ToDouble(this.k.Text);
+
+
+                sigma = Convert.ToDouble(this.Sigma.Text);
+
+
+                r = Convert.ToDouble(this.R.Text);
+
+
+                T = Convert.ToDouble(this.Tenor.Text);
+
+                TrailNum = Convert.ToInt32(this.Trail.Text);
+
+                StepNum = Convert.ToInt32(this.Step.Text);
+
+
+                double[,] Randoms = RandomNum.RandomSet(TrailNum, StepNum);
+                double[] EurpCall = EuropOption.PriceEurp(SO, K, sigma, r, T, StepNum, TrailNum, Randoms);
+                double[] GreekValue = Greek.Greeks(SO, K, sigma, r, T, StepNum, TrailNum, Randoms);
+
+                Console.Write("{0}\t", EurpCall[0].ToString());
+                Console.Write("{0}\t", EurpCall[1].ToString());
+                Console.Write("{0}\t", EurpCall[2].ToString());
+                Console.Write("{0}\t", EurpCall[3].ToString());
+                Console.WriteLine("\n");
+                Console.Write("{0}\t", GreekValue[0].ToString());
+                Console.Write("{0}\t", GreekValue[1].ToString());
+                Console.WriteLine("\n");
+                Console.Write("{0}\t", GreekValue[2].ToString());
+                Console.Write("{0}\t", GreekValue[3].ToString());
+                Console.WriteLine("\n");
+                Console.Write("{0}\t", GreekValue[4].ToString());
+                Console.Write("{0}\t", GreekValue[5].ToString());
+                Console.WriteLine("\n");
+                Console.Write("{0}\t", GreekValue[6].ToString());
+                Console.Write("{0}\t", GreekValue[7].ToString());
+                Console.WriteLine("\n");
+                Console.Write("{0}\t", GreekValue[8].ToString());
+                Console.Write("{0}\t", GreekValue[9].ToString());
+                Console.WriteLine("\n");
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("inputs need to be numbers.");
+            }
         }
 
         public void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-            //int TrailNum = Convert.ToInt32(Trails);
-            //int StepNum = Convert.ToInt32(Steps);
-            if (!string.IsNullOrEmpty(this.So.Text)) {
-             SO = Convert.ToDouble(this.So.Text);
-            }
-            if (!string.IsNullOrEmpty(this.k.Text))
-            {
-                 K = Convert.ToDouble(this.k.Text);
-            }
-            if (!string.IsNullOrEmpty(this.Sigma.Text))
-            {
-               sigma = Convert.ToDouble(this.Sigma.Text);
-            }
-            if (!string.IsNullOrEmpty(this.R.Text))
-            {
-              r = Convert.ToDouble(this.R.Text);
-            }
-            if (!string.IsNullOrEmpty(this.Tenor.Text))
-            {
-                T = Convert.ToDouble(this.Tenor.Text);
-            }
-            if (!string.IsNullOrEmpty(this.Trail.Text))
-            {
-               TrailNum = Convert.ToInt32(this.Trail.Text);
-            }
-            if (!string.IsNullOrEmpty(this.Step.Text))
-            {
-                StepNum = Convert.ToInt32(this.Step.Text);
-            }
-            
-
+        }
+ 
         }
         
     }
 
-}
+
