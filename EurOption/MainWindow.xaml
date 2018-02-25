@@ -21,19 +21,21 @@
                 </LinearGradientBrush>
             </Button.Foreground>
         </Button>
-       <Label Content="S0" HorizontalAlignment="Left" Margin="146,25,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <Label Content="k" HorizontalAlignment="Left" Margin="146,60,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <Label Content="Sigma" HorizontalAlignment="Left" Margin="146,94,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <Label Content="R" HorizontalAlignment="Left" Margin="146,129,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <Label Content="Tenor" HorizontalAlignment="Left" Margin="146,164,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <Label Content="Trail" HorizontalAlignment="Left" Margin="146,199,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <Label Content="Step" HorizontalAlignment="Left" Margin="146,234,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
-        <TextBox x:Name="So" HorizontalAlignment="Left" Height="23" Margin="226,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
-        <TextBox x:Name="k" HorizontalAlignment="Left" Height="23" Margin="226,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
-        <TextBox x:Name="Sigma" HorizontalAlignment="Left" Height="23" Margin="226,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
-        <TextBox x:Name="R" HorizontalAlignment="Left" Height="23" Margin="226,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
-        <TextBox x:Name="Tenor" HorizontalAlignment="Left" Height="23" Margin="226,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Text=""/>
-        <TextBox x:Name="Trail" HorizontalAlignment="Left" Height="23" Margin="226,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
-        <TextBox x:Name="Step" HorizontalAlignment="Left" Height="23" Margin="226,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
-        </Grid>
+       <Label Content="S0" HorizontalAlignment="Left" Margin="146,8,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <Label Content="k" HorizontalAlignment="Left" Margin="146,40,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <Label Content="Sigma" HorizontalAlignment="Left" Margin="146,72,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <Label Content="R" HorizontalAlignment="Left" Margin="146,103,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <Label Content="Tenor" HorizontalAlignment="Left" Margin="146,135,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <Label Content="Trail" HorizontalAlignment="Left" Margin="146,166,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <Label Content="Step" HorizontalAlignment="Left" Margin="146,199,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <TextBox x:Name="So" HorizontalAlignment="Left" Height="23" Margin="226,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
+        <TextBox x:Name="k" HorizontalAlignment="Left" Height="23" Margin="226,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
+        <TextBox x:Name="Sigma" HorizontalAlignment="Left" Height="23" Margin="226,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
+        <TextBox x:Name="R" HorizontalAlignment="Left" Height="23" Margin="226,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
+        <TextBox x:Name="Tenor" HorizontalAlignment="Left" Height="23" Margin="226,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Text=""/>
+        <TextBox x:Name="Trail" HorizontalAlignment="Left" Height="23" Margin="226,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
+        <TextBox x:Name="Step" HorizontalAlignment="Left" Height="23" Margin="226,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text=""/>
+        <Label Content="Anti" HorizontalAlignment="Left" Margin="146,232,0,0" VerticalAlignment="Top" Width="56" BorderThickness="2.4" BorderBrush="#FF9EADDB" Height="28"/>
+        <TextBox x:Name="AntiOrNot" HorizontalAlignment="Left" Height="23" Margin="226,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged" Text="Anti-Reduc input 1, Regular input other number." FontSize="9"/>
+    </Grid>
 </Window>
