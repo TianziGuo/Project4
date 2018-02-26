@@ -124,8 +124,8 @@ namespace EurOption
                     }
 
                     //calculate the StdError
-                    StdCallEr = Math.Sqrt(StdCallSum) / TrailNum;
-                    StdPutEr = Math.Sqrt(StdPutSum) / TrailNum;
+                    StdCallEr = Math.Sqrt(StdCallSum) * Math.Exp(-r * t) / TrailNum;
+                    StdPutEr = Math.Sqrt(StdPutSum) * Math.Exp(-r * t) / TrailNum;
                    
                     Result[0] = x;
                     Result[1] = y;
