@@ -693,7 +693,7 @@ namespace EurOption
                 string OutPut;
                 //output the results
                 watch.Stop();
-                OutPut = Convert.ToString("EurCallprice : " + EurpCall[0] + "\n" + "EurPutprice : " + EurpCall[1] + "\n" + "EurCallStdEr : " + EurpCall[2] + "\n" + "EurPutStdEr : " + EurpCall[3] + "\n" + "EurCallDelta : " + GreekValue[0] + "\n" + "EurPutDelta : " + GreekValue[1] + "\n" + "EurCallGamma : " + GreekValue[2] + "\n" + "EurPutGamma : " + GreekValue[3] + "\n" + "EurCallVega : " + GreekValue[4] + "\n" + "EurPutVega : " + GreekValue[5] + "\n" + "EurCallTheta : " + GreekValue[6] + "\n" + "EurPutTheta : " + GreekValue[7] + "\n" + "EurCallRho : " + GreekValue[8] + "\n" + "EurPutRho : " + GreekValue[9]+"\n"+"Timer : "+watch.Elapsed.TotalSeconds.ToString());
+                OutPut = Convert.ToString("EurCallprice : " + EurpCall[0] + "\n" + "EurPutprice : " + EurpCall[1] + "\n" + "EurCallStdEr : " + EurpCall[2] + "\n" + "EurPutStdEr : " + EurpCall[3] + "\n" + "EurCallDelta : " + GreekValue[0] + "\n" + "EurPutDelta : " + GreekValue[1] + "\n" + "EurCallGamma : " + GreekValue[2] + "\n" + "EurPutGamma : " + GreekValue[3] + "\n" + "EurCallVega : " + GreekValue[4] + "\n" + "EurPutVega : " + GreekValue[5] + "\n" + "EurCallTheta : " + GreekValue[6] + "\n" + "EurPutTheta : " + GreekValue[7] + "\n" + "EurCallRho : " + GreekValue[8] + "\n" + "EurPutRho : " + GreekValue[9]+"\n"+"Timer : "+watch.Elapsed.TotalSeconds.ToString() + "\n" + "Cores : "+cores);
                 MessageBox.Show(OutPut);
             }
             catch (Exception)
