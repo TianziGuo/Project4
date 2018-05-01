@@ -2027,8 +2027,31 @@ namespace EurOption
                 //LookbackOption= Convert.ToInt32(this.Digitaloption.Text);
                 BarrierOption = Convert.ToInt32(this.Barrieroption.Text);
                 BarrierNumber = Convert.ToInt32(this.BarrierNum.Text);
-
-                // int m;
+               
+                    if (EurOption == 6) {
+                    if (BarrierOption == 1 && SO < BarrierNumber)
+                    {
+                        MessageBox.Show("When using Down&Out type, BarrierNumber should smaller than SO, please reput BarrierNumber.");
+                        return;
+                    }
+                    else if (BarrierOption == 3 && SO < BarrierNumber)
+                    {
+                        MessageBox.Show("When using Down&In type, BarrierNumber should smaller than SO, please reput BarrierNumber.");
+                        return;
+                    }
+                    else if (BarrierOption == 2 && SO > BarrierNumber)
+                    {
+                        MessageBox.Show("When using Up&Out type, BarrierNumber should bigger than SO, please reput BarrierNumber.");
+                        return;
+                    }
+                    else if (BarrierOption == 4 && SO > BarrierNumber)
+                    {
+                        MessageBox.Show("When using Up&In type, BarrierNumber should bigger than SO, please reput BarrierNumber.");
+                        return;
+                    }
+                   
+                    }
+               
                 double[,] Randoms;
 
                 if (EurOption!=1)
@@ -2052,6 +2075,8 @@ namespace EurOption
                         Randoms = RandomNum.RandomSetMulti1(TrailNum, StepNum, EurOption);
                     } 
 }
+                
+
                 increase(1);
                 double[] Set;
                 double[] GreekValue;
